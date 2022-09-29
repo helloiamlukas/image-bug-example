@@ -2,7 +2,7 @@
 ## How to reproduce
 1. Clone this repo
 2. Run `composer install`
-3. Replace `vender/statamic/cms/...` files with https://github.com/statamic/cms/pull/6726/files
+3. Replace `vendor/statamic/cms/...` files with https://github.com/statamic/cms/pull/6726/files
 3. Copy `.env.example` to `.env`
 4. Fill in the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_BUCKET`, `AWS_URL` and `AWS_REGION`
 5. Set up Redis and fill in the `REDIS_HOST`, `REDIS_PASSWORD` and `REDIS_PORT`
