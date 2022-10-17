@@ -6,8 +6,16 @@
             Published
             on {{ date format="M j, Y" }}
         </div>
+        <img
+            src="{{ image:url }}"
+            alt="{{ image:alt }}"
+        />
+        <img
+            src="{{ another_image:url }}"
+            alt="{{ another_image:alt }}"
+        />
         <div class="content">
-            {{ content | widont }}
+            {{ content }}
         </div>
     </article>
 </div>

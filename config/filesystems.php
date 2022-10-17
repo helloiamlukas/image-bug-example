@@ -53,11 +53,6 @@ return [
             'root' => 'test',
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             // 'visibility' => 'public', // https://statamic.dev/assets#visibility
-            'cache' => [
-                'store' => 'file',
-                'expire' => 60 * 24 * 7 * 4,
-                'prefix' => 's3',
-            ],
         ],
 
         'assets' => [
