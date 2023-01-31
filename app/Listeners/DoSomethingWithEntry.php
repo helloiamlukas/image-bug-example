@@ -37,9 +37,7 @@ class DoSomethingWithEntry implements ShouldQueue
     {
         $this->entry = $event->entry;
 
-        // In our case this is used to send a preview of the post via email
-        // -> It will run into a timeout and not finish
-        (new View())
+        $html = (new View())
             ->template('articles/show')
             ->with(
                 $this->entry
@@ -48,5 +46,7 @@ class DoSomethingWithEntry implements ShouldQueue
                     ->all(),
             )
             ->render();
+
+        Log::info($html);
     }
 }

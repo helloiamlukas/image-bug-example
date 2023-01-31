@@ -6,16 +6,19 @@
             Published
             on {{ date format="M j, Y" }}
         </div>
-        <img
-            src="{{ image:url }}"
-            alt="{{ image:alt }}"
-        />
-        <img
-            src="{{ another_image:url }}"
-            alt="{{ another_image:alt }}"
-        />
         <div class="content">
             {{ content }}
+                {{ if type == "image" }}
+                    {{ file }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt }}"
+                        />
+                    {{ /file }}
+                {{ elseif type == "text" }}
+                    {{ text }}
+                {{ /if }}
+            {{ /content }}
         </div>
     </article>
 </div>
